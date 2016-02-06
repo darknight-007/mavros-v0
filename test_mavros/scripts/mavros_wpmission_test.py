@@ -82,16 +82,11 @@ if __name__ == "__main__":
     wpPushRequest.waypoints.append(createLand())
     print(waypointPushService.call(wpPushRequest))
 
-    # wpSetCurrentRequest = WaypointSetCurrentRequest()
-    # print(waypointSetCurrService.call(wpSetCurrentRequest))
-
-    
-    	
-    rospy.sleep(2)
-
+    rospy.sleep(1)
     arm = rospy.ServiceProxy('mavros/cmd/arming', CommandBool)
     print(arm(True))
-    rospy.sleep(5)
+    
+    rospy.sleep(1)
     setmode = rospy.ServiceProxy('mavros/set_mode', SetMode)
     print(setmode(0, 'AUTO.MISSION'))
 
