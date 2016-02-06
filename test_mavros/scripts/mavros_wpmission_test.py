@@ -16,43 +16,6 @@ from mavros_msgs.srv import CommandBool
 #| 2 |  No  | Yes  | GRA (3) |   LAND (21)   |      25.0      |        3.0        | -0.0 | 0.0 | 47.3665084839 | 8.55013847351 |  25.0 |
 #+---+------+------+---------+---------------+----------------+-------------------+------+-----+---------------+---------------+-------+
 
-
-def createWaypoint(_command, _visitationRadius, _lat, _lon, _alt):
-    wp = Waypoint()
-    wp.frame = 3
-    wp.command = 16
-    wp.autocontinue = True
-    wp.param1 = 0
-    wp.param2 = _visitationRadius
-    wp.param3 = 0
-    wp.param4 = 0
-    wp.x_lat = _lat
-    wp.y_long = _lon
-    wp.z_alt = _alt
-    return wp
-
-def createLand():
-    # 22	MAV_CMD_NAV_TAKEOFF	Takeoff from ground / hand
-    # Mission Param #1	Minimum pitch (if airspeed sensor present), desired pitch without sensor
-    # Mission Param #2	Empty
-    # Mission Param #3	Empty
-    # Mission Param #4	Yaw angle (if magnetometer present), ignored without magnetometer
-    # Mission Param #5	Latitude
-    # Mission Param #6	Longitude
-    # Mission Param #7	Altitude
-    wp = Waypoint()
-    wp.frame = 3
-    wp.command = 21
-    wp.autocontinue = True
-    wp.param1 = 25.0
-    wp.param2 = 3.0
-    wp.param3 = -0.0
-    wp.param4 = 0.0
-    wp.x_lat = 47.3665084839
-    wp.y_long = 8.55013847351
-    wp.z_alt = 25.0
-    return wp
-
 def createTakeoffCurr():
     # 22	MAV_CMD_NAV_TAKEOFF	Takeoff from ground / hand
     # Mission Param #1	Minimum pitch (if airspeed sensor present), desired pitch without sensor
@@ -74,6 +37,35 @@ def createTakeoffCurr():
     wp.y_long = 8.54999923706
     wp.z_alt = 25.0
     return wp
+
+def createWaypoint(_command, _visitationRadius, _lat, _lon, _alt):
+    wp = Waypoint()
+    wp.frame = 3
+    wp.command = 16
+    wp.autocontinue = True
+    wp.param1 = 0
+    wp.param2 = _visitationRadius
+    wp.param3 = 0
+    wp.param4 = 0
+    wp.x_lat = _lat
+    wp.y_long = _lon
+    wp.z_alt = _alt
+    return wp
+
+def createLand():
+    wp = Waypoint()
+    wp.frame = 3
+    wp.command = 21
+    wp.autocontinue = True
+    wp.param1 = 25.0
+    wp.param2 = 3.0
+    wp.param3 = -0.0
+    wp.param4 = 0.0
+    wp.x_lat = 47.3665084839
+    wp.y_long = 8.55013847351
+    wp.z_alt = 25.0
+    return wp
+
 
 
 if __name__ == "__main__":
