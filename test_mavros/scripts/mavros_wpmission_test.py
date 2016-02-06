@@ -38,7 +38,7 @@ def createTakeoffCurr():
     wp.z_alt = 25.0
     return wp
 
-def createWaypoint(_command, _visitationRadius, _lat, _lon, _alt):
+def createWaypoint(_visitationRadius, _lat, _lon, _alt):
     wp = Waypoint()
     wp.frame = 3
     wp.command = 16
@@ -78,7 +78,8 @@ if __name__ == "__main__":
     waypointSetCurrService = rospy.ServiceProxy('/mavros/mission/set_current', WaypointSetCurrent)
 
     wpPushRequest.waypoints.append(createTakeoffCurr())
-    wpPushRequest.waypoints.append(createWaypoint(16, 10, 47.3670138753861707, 8.55059266090393066, 25.0))
+    wpPushRequest.waypoints.append(createWaypoint(10.0, 47.3670138753861707, 8.55059266090393066, 25.0))
+    wpPushRequest.waypoints.append(createWaypoint(10.0, 47.3665084839, 8.55013847351, 25.0))
     wpPushRequest.waypoints.append(createLand())
     print(waypointPushService.call(wpPushRequest))
 
