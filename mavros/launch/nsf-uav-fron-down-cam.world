@@ -20,7 +20,7 @@
           <geometry>
             <plane>
               <normal>0 0 1</normal>
-              <size>100 100</size>
+              <size>10000 10000</size>
             </plane>
           </geometry>
           <surface>
@@ -76,7 +76,372 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <model name='f450'>
+    <model name='Gas Station'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://gas_station/meshes/gas_station.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://gas_station/meshes/gas_station.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://gas_station/materials/scripts</uri>
+              <uri>model://gas_station/materials/textures</uri>
+              <name>GasStation/Diffuse</name>
+            </script>
+            <shader type='normal_map_object_space'>
+              <normal_map>GasStation_Normal.png</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>16 2 0 0 -0 0</pose>
+    </model>
+    <model name='House 1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://house_1/meshes/house_1.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://house_1/meshes/house_1.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://house_1/materials/scripts</uri>
+              <uri>model://house_1/materials/textures</uri>
+              <name>House_1/Diffuse</name>
+            </script>
+            <shader type='normal_map_object_space'>
+              <normal_map>House_1_Normal.png</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-11 30.4307 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>171 458000000</sim_time>
+      <real_time>232 691327694</real_time>
+      <wall_time>1454805465 131430129</wall_time>
+      <iterations>104241</iterations>
+      <model name='Gas Station'>
+        <pose frame=''>16 2 0 0 -0 0</pose>
+        <link name='link'>
+          <pose frame=''>16 2 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='House 1'>
+        <pose frame=''>-11 30.4307 0 0 -0 0</pose>
+        <link name='link'>
+          <pose frame=''>-11 30.4307 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='House 3'>
+        <pose frame=''>-24 28 0 0 -0 0</pose>
+        <link name='link'>
+          <pose frame=''>-24 28 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Office Building'>
+        <pose frame=''>18 27 0 0 -0 0</pose>
+        <link name='link'>
+          <pose frame=''>18 27 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Office Building_0'>
+        <pose frame=''>-51 -13.4364 0 0 -0 0</pose>
+        <link name='link'>
+          <pose frame=''>-51 -13.4364 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='asphalt_plane'>
+        <pose frame=''>-4.45539 0 0 0 -0 0</pose>
+        <link name='link'>
+          <pose frame=''>-4.45539 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='f450_0'>
+        <pose frame=''>0.553107 1.00525 0.109995 -2.8e-05 -3e-06 0.013562</pose>
+        <link name='base_link'>
+          <pose frame=''>0.553107 1.00525 0.109995 -2.8e-05 -3e-06 0.013562</pose>
+          <velocity>-0.000191 0.0017 -0.004987 -0.028325 -0.003185 0</velocity>
+          <acceleration>0 0 -9.8 0 -1e-06 -1.8e-05</acceleration>
+          <wrench>0 0 -9.8 0 -0 0</wrench>
+        </link>
+        <link name='f450/robot_camera'>
+          <pose frame=''>0.673096 1.00688 0.169995 -2.8e-05 -3e-06 0.013562</pose>
+          <velocity>-0.000382 0.003399 -0.004651 -0.028325 -0.003185 0</velocity>
+          <acceleration>-1e-06 8e-06 -9.80005 0 -2e-06 -9e-06</acceleration>
+          <wrench>-0 0 -0.147001 0 -0 0</wrench>
+        </link>
+        <link name='f450/robot_camera_down'>
+          <pose frame=''>0.433118 1.00363 0.119995 -1.25947 1.57077 -1.24591</pose>
+          <velocity>-0.000223 0.001983 -0.005323 -0.028325 -0.003185 0</velocity>
+          <acceleration>1e-06 -8e-06 -9.80001 0 -2e-06 -9e-06</acceleration>
+          <wrench>0 -0 -0.147 0 -0 0</wrench>
+        </link>
+        <link name='iris/imu_link'>
+          <pose frame=''>0.553107 1.00525 0.109995 -2.8e-05 -3e-06 0.013562</pose>
+          <velocity>-0.000191 0.0017 -0.004987 -0.028325 -0.003185 0</velocity>
+          <acceleration>0 -0 -9.8 0 -2e-06 -9e-06</acceleration>
+          <wrench>0 -0 -0.147 0 -0 0</wrench>
+        </link>
+        <link name='rotor_0'>
+          <pose frame=''>0.714248 0.848427 0.22 -2.8e-05 -3e-06 0.011738</pose>
+          <velocity>-0.000542 0.004815 -3.1e-05 -0.028325 -0.003185 0</velocity>
+          <acceleration>-1e-05 6.9e-05 -9.80004 -3e-06 -2e-06 -0.00016</acceleration>
+          <wrench>-0 0 -0.049 0 -0 0</wrench>
+        </link>
+        <link name='rotor_1'>
+          <pose frame=''>0.391965 1.16209 0.21999 -2.8e-05 -3e-06 0.011738</pose>
+          <velocity>-0.000541 0.004815 -0.009942 -0.028325 -0.003185 0</velocity>
+          <acceleration>9e-06 -6.9e-05 -9.80004 -3e-06 -2e-06 -0.00016</acceleration>
+          <wrench>0 -0 -0.049 0 -0 0</wrench>
+        </link>
+        <link name='rotor_2'>
+          <pose frame=''>0.709936 1.1664 0.219991 -2.8e-05 -3e-06 0.011738</pose>
+          <velocity>-0.000541 0.004815 -0.009052 -0.028325 -0.003185 0</velocity>
+          <acceleration>8e-06 -5.9e-05 -9.80004 -3e-06 -2e-06 -0.00016</acceleration>
+          <wrench>0 -0 -0.049 0 -0 0</wrench>
+        </link>
+        <link name='rotor_3'>
+          <pose frame=''>0.396277 0.844115 0.219999 -2.8e-05 -3e-06 0.011738</pose>
+          <velocity>-0.000542 0.004815 -0.000922 -0.028325 -0.003185 0</velocity>
+          <acceleration>-8e-06 5.9e-05 -9.80004 -3e-06 -2e-06 -0.00016</acceleration>
+          <wrench>-0 0 -0.049 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-2.06238 0.431897 0.719469 0 0.247643 0.164193</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='asphalt_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>20 20 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>20 20 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://asphalt_plane/materials/scripts</uri>
+              <uri>model://asphalt_plane/materials/textures</uri>
+              <name>vrc/asphalt</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-4.45539 0 0 0 -0 0</pose>
+    </model>
+    <model name='Office Building'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://office_building/meshes/office_building.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://office_building/meshes/office_building.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>18 27 0 0 -0 0</pose>
+    </model>
+    <model name='Office Building_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://office_building/meshes/office_building.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://office_building/meshes/office_building.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-51 -13.4364 0 0 -0 0</pose>
+    </model>
+    <model name='House 3'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://house_3/meshes/house_3.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://house_3/meshes/house_3.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://house_3/materials/scripts</uri>
+              <uri>model://house_3/materials/textures</uri>
+              <uri>model://house_1/materials/textures</uri>
+              <name>House_3/Diffuse</name>
+            </script>
+            <shader type='normal_map_object_space'>
+              <normal_map>model://house_1/materials/textures/House_1_Normal.png</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-24 28 0 0 -0 0</pose>
+    </model>
+    <model name='f450_0'>
       <link name='base_link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
@@ -169,7 +534,7 @@
             <imageTopicName>image_raw_front</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
             <updateRate>10.0</updateRate>
-            <cameraName>arm_camera</cameraName>
+            <cameraName>uav_camera</cameraName>
             <frameName>f450/robot_camera</frameName>
             <CxPrime>320.5</CxPrime>
             <Cx>320.5</Cx>
@@ -227,13 +592,13 @@
             <imageTopicName>image_raw_down</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
             <updateRate>10.0</updateRate>
-            <cameraName>arm_camera</cameraName>
+            <cameraName>uav_camera</cameraName>
             <frameName>f450/robot_camera_down</frameName>
             <CxPrime>320.5</CxPrime>
             <Cx>320.5</Cx>
             <Cy>240.5</Cy>
             <hackBaseline>0</hackBaseline>
-            <focalLength>1</focalLength>
+            <focalLength>10</focalLength>
             <distortionK1>0.0</distortionK1>
             <distortionK2>0.0</distortionK2>
             <distortionK3>0.0</distortionK3>
@@ -685,228 +1050,7 @@
         <accelerometerBiasCorrelationTime>300.0</accelerometerBiasCorrelationTime>
         <accelerometerTurnOnBiasSigma>0.196</accelerometerTurnOnBiasSigma>
       </plugin>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <pose frame=''>0.540377 1 0 0 -0 0</pose>
     </model>
-    <model name='Gas Station'>
-      <static>1</static>
-      <link name='link'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://gas_station/meshes/gas_station.dae</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://gas_station/meshes/gas_station.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://gas_station/materials/scripts</uri>
-              <uri>model://gas_station/materials/textures</uri>
-              <name>GasStation/Diffuse</name>
-            </script>
-            <shader type='normal_map_object_space'>
-              <normal_map>GasStation_Normal.png</normal_map>
-            </shader>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>16 2 0 0 -0 0</pose>
-    </model>
-    <model name='powerplant'>
-      <static>1</static>
-      <link name='link'>
-        <pose frame=''>0 0 0.01 0 -0 0</pose>
-        <collision name='wall1'>
-          <geometry>
-            <mesh>
-              <uri>model://powerplant/meshes/powerplant.dae</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual1'>
-          <geometry>
-            <mesh>
-              <uri>model://powerplant/meshes/powerplant.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>6.58879 -88.4559 0 0 -0 0</pose>
-    </model>
-    <model name='House 1'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://house_1/meshes/house_1.dae</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://house_1/meshes/house_1.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://house_1/materials/scripts</uri>
-              <uri>model://house_1/materials/textures</uri>
-              <name>House_1/Diffuse</name>
-            </script>
-            <shader type='normal_map_object_space'>
-              <normal_map>House_1_Normal.png</normal_map>
-            </shader>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>-11 30.4307 0 0 -0 0</pose>
-    </model>
-    <state world_name='default'>
-      <sim_time>67 217000000</sim_time>
-      <real_time>76 991614342</real_time>
-      <wall_time>1454803709 219028585</wall_time>
-      <iterations>67217</iterations>
-      <model name='Gas Station'>
-        <pose frame=''>16 2 0 0 -0 0</pose>
-        <link name='link'>
-          <pose frame=''>16 2 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='House 1'>
-        <pose frame=''>-11 30.4307 0 0 -0 0</pose>
-        <link name='link'>
-          <pose frame=''>-11 30.4307 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='f450'>
-        <pose frame=''>0 0 0.06 0 -0 0</pose>
-        <link name='base_link'>
-          <pose frame=''>0 0 0.06 0 -0 0</pose>
-          <velocity>-0 -0 0 0 -0 0</velocity>
-          <acceleration>-4e-06 -4e-06 0 6.7e-05 -6.6e-05 -1e-06</acceleration>
-          <wrench>-4e-06 -4e-06 0 0 -0 0</wrench>
-        </link>
-        <link name='f450/robot_camera'>
-          <pose frame=''>0.12 0 0.12 0 -0 0</pose>
-          <velocity>-0 -0 0 0 -0 0</velocity>
-          <acceleration>-2.1e-05 -2.2e-05 8e-06 7.7e-05 -6.2e-05 -6e-06</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
-        </link>
-        <link name='f450/robot_camera_down'>
-          <pose frame=''>-0.12 -0 0.07 4e-06 1.57079 4e-06</pose>
-          <velocity>-0 -0 -0 0 -0 0</velocity>
-          <acceleration>-1.8e-05 -1.7e-05 -7e-06 7.6e-05 -6.2e-05 -6e-06</acceleration>
-          <wrench>-0 -0 -0 0 -0 0</wrench>
-        </link>
-        <link name='iris/imu_link'>
-          <pose frame=''>0 -0 0.06 0 -0 0</pose>
-          <velocity>-0 -0 0 0 -0 0</velocity>
-          <acceleration>-1.7e-05 -1.7e-05 0 7.6e-05 -6.2e-05 -6e-06</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
-        </link>
-        <link name='rotor_0'>
-          <pose frame=''>0.159 -0.159 0.17 0 -0 1.01868</pose>
-          <velocity>-0 -0 -0 -1.6e-05 -8.5e-05 -0.265482</velocity>
-          <acceleration>-1.9e-05 -1.9e-05 -1e-06 2.98097 1.128 3.14159</acceleration>
-          <wrench>-0 -0 -0 0 -0 0</wrench>
-        </link>
-        <link name='rotor_1'>
-          <pose frame=''>-0.159 0.159 0.17 0 -0 1.01868</pose>
-          <velocity>-0 -0 0 -2.1e-05 -9.8e-05 -0.265482</velocity>
-          <acceleration>-1.6e-05 -1.6e-05 1e-06 -1.16416 0.37015 -1e-06</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
-        </link>
-        <link name='rotor_2'>
-          <pose frame=''>0.159 0.159 0.17 0 0 -1.01868</pose>
-          <velocity>-0 -0 0 -5e-06 2.3e-05 0.265482</velocity>
-          <acceleration>-1.6e-05 -1.8e-05 1.8e-05 1.40415 0.296233 -3.14159</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
-        </link>
-        <link name='rotor_3'>
-          <pose frame=''>-0.159 -0.159 0.17 0 -0 -1.01868</pose>
-          <velocity>-0 -0 -0 0 1e-05 0.265482</velocity>
-          <acceleration>-1.9e-05 -1.6e-05 -1.8e-05 -0.731769 1.1984 -0</acceleration>
-          <wrench>-0 -0 -0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='ground_plane'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <link name='link'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='powerplant'>
-        <pose frame=''>6.58879 -88.4559 0 0 -0 0</pose>
-        <link name='link'>
-          <pose frame=''>6.58879 -88.4559 0.01 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-    </state>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose frame=''>-69.985 85.741 36.6838 0 0.303643 -0.495807</pose>
-        <view_controller>orbit</view_controller>
-        <projection_type>perspective</projection_type>
-      </camera>
-    </gui>
   </world>
 </sdf>

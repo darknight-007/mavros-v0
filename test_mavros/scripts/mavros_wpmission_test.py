@@ -61,8 +61,8 @@ def createLand():
     wp.param2 = 3.0
     wp.param3 = -0.0
     wp.param4 = 0.0
-    wp.x_lat = 47.3665084839
-    wp.y_long = 8.55013847351
+    wp.x_lat = 47.3669242859
+    wp.y_long = 8.54999923706
     wp.z_alt = 25.0
     return wp
 
