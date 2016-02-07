@@ -78,24 +78,6 @@
     </spherical_coordinates>
     <model name='Gas Station'>
       <static>1</static>
-      <joint name='ground/cam_joint' type='revolute'>
-        <child>gas_station_cam</child>
-        <parent>link</parent>
-        <axis>
-          <xyz>1 0 0</xyz>
-          <limit>
-            <lower>0</lower>
-            <upper>0</upper>
-            <effort>0</effort>
-            <velocity>0</velocity>
-          </limit>
-          <dynamics>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-          </dynamics>
-          <use_parent_model_frame>1</use_parent_model_frame>
-        </axis>
-      </joint>
       <link name='link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <collision name='collision'>
@@ -182,10 +164,19 @@
       <pose frame=''>-11 30.4307 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>560 590000000</sim_time>
-      <real_time>158 845763523</real_time>
-      <wall_time>1454821843 947384112</wall_time>
-      <iterations>121836</iterations>
+      <sim_time>802 974000000</sim_time>
+      <real_time>152 113661304</real_time>
+      <wall_time>1454823829 459865211</wall_time>
+      <iterations>100410</iterations>
+      <model name='Dumpster'>
+        <pose frame=''>24.4405 -17 0.000917 0 -2e-06 0</pose>
+        <link name='link'>
+          <pose frame=''>24.4405 -17 0.000917 0 -2e-06 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.006033 -0 -9e-06 0 -0.280676 4e-06</acceleration>
+          <wrench>-0.006033 -0 -9e-06 0 -0 0</wrench>
+        </link>
+      </model>
       <model name='Gas Station'>
         <pose frame=''>17.5764 9.02216 -0.049651 0 -0 0.0019</pose>
         <link name='link'>
@@ -231,55 +222,64 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='f450_0'>
-        <pose frame=''>0.553012 1.0053 0.06 0 -0 0.013501</pose>
-        <link name='base_link'>
-          <pose frame=''>0.553012 1.0053 0.06 0 -0 0.013501</pose>
+      <model name='asphalt_plane'>
+        <pose frame=''>39 -29.4438 0 0 -0 0</pose>
+        <link name='link'>
+          <pose frame=''>39 -29.4438 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>8e-06 8e-06 0 -0.000132 0.000129 0</acceleration>
-          <wrench>8e-06 8e-06 0 0 -0 0</wrench>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='f450_0'>
+        <pose frame=''>0.553012 1.0053 0.06 0 -0 0.013502</pose>
+        <link name='base_link'>
+          <pose frame=''>0.553012 1.0053 0.06 0 -0 0.013502</pose>
+          <velocity>0 0 0 -1e-06 0 0</velocity>
+          <acceleration>6e-05 6.2e-05 1e-06 -0.001024 0.000996 0</acceleration>
+          <wrench>6e-05 6.2e-05 1e-06 0 -0 0</wrench>
+        </link>
+        <link name='f450/imu_link'>
+          <pose frame=''>0.553012 1.0053 0.06 0 -0 0.013502</pose>
+          <velocity>0 0 0 -1e-06 0 0</velocity>
+          <acceleration>6.5e-05 6.6e-05 1e-06 -0.001039 0.001 -2e-06</acceleration>
+          <wrench>1e-06 1e-06 0 0 -0 0</wrench>
         </link>
         <link name='f450/robot_camera'>
-          <pose frame=''>0.673001 1.00692 0.12 0 -0 0.013501</pose>
-          <velocity>0 0 -0 0 -0 0</velocity>
-          <acceleration>1.6e-05 1.6e-05 -1.6e-05 -0.000132 0.000129 0</acceleration>
-          <wrench>0 0 -0 0 -0 0</wrench>
+          <pose frame=''>0.673001 1.00692 0.12 0 -0 0.013502</pose>
+          <velocity>0 0 -0 -1e-06 0 0</velocity>
+          <acceleration>0.000125 0.000128 -0.000121 -0.001039 0.001 -2e-06</acceleration>
+          <wrench>2e-06 2e-06 -2e-06 0 -0 0</wrench>
         </link>
         <link name='f450/robot_camera_down'>
-          <pose frame=''>0.433023 1.00368 0.07 -5e-06 1.57079 0.013496</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>9e-06 9e-06 1.6e-05 -0.000132 0.000129 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='iris/imu_link'>
-          <pose frame=''>0.553012 1.0053 0.06 0 -0 0.013501</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>8e-06 8e-06 0 -0.000132 0.000129 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose frame=''>0.433023 1.00368 0.07 -2e-06 1.57079 0.0135</pose>
+          <velocity>0 0 0 -1e-06 0 0</velocity>
+          <acceleration>7.5e-05 7.7e-05 0.000123 -0.001039 0.001 -2e-06</acceleration>
+          <wrench>1e-06 1e-06 2e-06 0 -0 0</wrench>
         </link>
         <link name='rotor_0'>
-          <pose frame=''>0.714144 0.848461 0.17 0 -0 0.013501</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>2.2e-05 2.3e-05 0 0.000163 0.000131 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose frame=''>0.714144 0.848461 0.17 0 -0 0.946986</pose>
+          <velocity>2.2e-05 -3.3e-05 0 1.8e-05 8.6e-05 -0.265482</velocity>
+          <acceleration>0.021879 -0.032481 2e-06 -2.47784 -0.320886 3.14159</acceleration>
+          <wrench>0.000109 -0.000162 0 0 -0 0</wrench>
         </link>
         <link name='rotor_1'>
-          <pose frame=''>0.39188 1.16214 0.17 0 -0 0.013501</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>2.2e-05 2.3e-05 0 0.000163 0.000131 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose frame=''>0.391881 1.16214 0.17 0 -0 0.946986</pose>
+          <velocity>4.9e-05 4.1e-05 -0 1.5e-05 7.4e-05 -0.265482</velocity>
+          <acceleration>0.049047 0.041472 0 2.82101 1.06003 3.14159</acceleration>
+          <wrench>0.000245 0.000207 0 0 -0 0</wrench>
         </link>
         <link name='rotor_2'>
-          <pose frame=''>0.709851 1.16643 0.17 0 -0 0.013501</pose>
-          <velocity>0 0 -0 0 -0 0</velocity>
-          <acceleration>2.2e-05 2.3e-05 -4.2e-05 0.000163 0.000131 0</acceleration>
-          <wrench>0 0 -0 0 -0 0</wrench>
+          <pose frame=''>0.709853 1.16643 0.17 -0 -0 -0.919981</pose>
+          <velocity>8e-05 -8.2e-05 -0 2e-06 -1.2e-05 0.265482</velocity>
+          <acceleration>0.079898 -0.081724 -0.000319 0.930314 -1.234 8e-06</acceleration>
+          <wrench>0.000399 -0.000409 -2e-06 0 -0 0</wrench>
         </link>
         <link name='rotor_3'>
-          <pose frame=''>0.396173 0.844168 0.17 0 -0 0.013501</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>2.2e-05 2.3e-05 4.2e-05 0.000163 0.000131 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose frame=''>0.396173 0.844168 0.17 0 -0 -0.919982</pose>
+          <velocity>2.2e-05 3.4e-05 0 8e-06 -2.5e-05 0.265482</velocity>
+          <acceleration>0.022001 0.033831 0.000321 -1.0873 -0.416853 -3.14159</acceleration>
+          <wrench>0.00011 0.000169 2e-06 0 -0 0</wrench>
         </link>
       </model>
       <model name='ground_plane'>
@@ -291,19 +291,10 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='unit_cylinder_1'>
-        <pose frame=''>-1.00021 3.87889 5.20892 0.016702 -9e-05 -6.3e-05</pose>
-        <link name='link'>
-          <pose frame=''>-1.00021 3.87889 5.20892 0.016702 -9e-05 -6.3e-05</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 -0 -0 -0</acceleration>
-          <wrench>0 0 -9.8 0 -0 0</wrench>
-        </link>
-      </model>
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-28.6651 23.3382 13.9751 0 0.236029 -0.658136</pose>
+        <pose frame=''>-20.0876 15.9908 7.487 -0 0.096029 -0.634129</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -623,7 +614,7 @@
           <use_parent_model_frame>1</use_parent_model_frame>
         </axis>
       </joint>
-      <link name='iris/imu_link'>
+      <link name='f450/imu_link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
           <pose frame=''>0 0 0 0 -0 0</pose>
@@ -641,8 +632,8 @@
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <joint name='iris/imu_joint' type='revolute'>
-        <child>iris/imu_link</child>
+      <joint name='f450/imu_joint' type='revolute'>
+        <child>f450/imu_link</child>
         <parent>base_link</parent>
         <axis>
           <xyz>1 0 0</xyz>
@@ -936,12 +927,12 @@
         </axis>
       </joint>
       <plugin name='rosbag' filename='librotors_gazebo_multirotor_base_plugin.so'>
-        <robotNamespace>iris</robotNamespace>
+        <robotNamespace>f450</robotNamespace>
         <linkName>base_link</linkName>
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='front_right_motor_model' filename='librotors_gazebo_motor_model.so'>
-        <robotNamespace>iris</robotNamespace>
+        <robotNamespace>f450</robotNamespace>
         <jointName>rotor_0_joint</jointName>
         <linkName>rotor_0</linkName>
         <turningDirection>ccw</turningDirection>
@@ -958,7 +949,7 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='back_left_motor_model' filename='librotors_gazebo_motor_model.so'>
-        <robotNamespace>iris</robotNamespace>
+        <robotNamespace>f450</robotNamespace>
         <jointName>rotor_1_joint</jointName>
         <linkName>rotor_1</linkName>
         <turningDirection>ccw</turningDirection>
@@ -975,7 +966,7 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='front_left_motor_model' filename='librotors_gazebo_motor_model.so'>
-        <robotNamespace>iris</robotNamespace>
+        <robotNamespace>f450</robotNamespace>
         <jointName>rotor_2_joint</jointName>
         <linkName>rotor_2</linkName>
         <turningDirection>cw</turningDirection>
@@ -992,7 +983,7 @@
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
       <plugin name='back_right_motor_model' filename='librotors_gazebo_motor_model.so'>
-        <robotNamespace>iris</robotNamespace>
+        <robotNamespace>f450</robotNamespace>
         <jointName>rotor_3_joint</jointName>
         <linkName>rotor_3</linkName>
         <turningDirection>cw</turningDirection>
@@ -1016,7 +1007,7 @@
       <static>0</static>
       <plugin name='rotors_gazebo_imu_plugin' filename='librotors_gazebo_imu_plugin.so'>
         <robotNamespace>iris</robotNamespace>
-        <linkName>iris/imu_link</linkName>
+        <linkName>f450/imu_link</linkName>
         <imuTopic>imu</imuTopic>
         <gyroscopeNoiseDensity>0.0003394</gyroscopeNoiseDensity>
         <gyroscopeRandomWalk>3.8785e-05</gyroscopeRandomWalk>
@@ -1029,26 +1020,13 @@
       </plugin>
       <pose frame=''>0.540377 1 0 0 -0 0</pose>
     </model>
-    <model name='unit_cylinder_1'>
-      <pose frame=''>-1 4 0.5 0 -0 0</pose>
+    <model name='Dumpster'>
       <link name='link'>
-        <inertial>
-          <mass>1</mass>
-          <inertia>
-            <ixx>0.145833</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.145833</iyy>
-            <iyz>0</iyz>
-            <izz>0.125</izz>
-          </inertia>
-        </inertial>
         <collision name='collision'>
           <geometry>
-            <cylinder>
-              <radius>0.0509485</radius>
-              <length>10.4176</length>
-            </cylinder>
+            <mesh>
+              <uri>model://dumpster/meshes/dumpster.dae</uri>
+            </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
           <surface>
@@ -1063,15 +1041,67 @@
         </collision>
         <visual name='visual'>
           <geometry>
-            <cylinder>
-              <radius>0.0509485</radius>
-              <length>10.4176</length>
-            </cylinder>
+            <mesh>
+              <uri>model://dumpster/meshes/dumpster.dae</uri>
+            </mesh>
           </geometry>
           <material>
             <script>
-              <name>Gazebo/Grey</name>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <uri>model://dumpster/materials/scripts</uri>
+              <uri>model://dumpster/materials/textures</uri>
+              <name>Dumpster/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>24.4405 -17 0 0 -0 0</pose>
+    </model>
+    <model name='asphalt_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>20 20 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>20 20 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://asphalt_plane/materials/scripts</uri>
+              <uri>model://asphalt_plane/materials/textures</uri>
+              <name>vrc/asphalt</name>
             </script>
           </material>
         </visual>
@@ -1079,6 +1109,7 @@
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
+      <pose frame=''>39 -29.4438 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>
