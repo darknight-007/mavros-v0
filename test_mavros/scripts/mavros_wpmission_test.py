@@ -15,6 +15,9 @@ from mavros_msgs.srv import CommandBool
 #| 1 |  No  | Yes  | GRA (3) | WAYPOINT (16) |      0.0       |        3.0        | -0.0 | 0.0 | 47.3667449951 | 8.55048179626 |  25.0 |
 #| 2 |  No  | Yes  | GRA (3) |   LAND (21)   |      25.0      |        3.0        | -0.0 | 0.0 | 47.3665084839 | 8.55013847351 |  25.0 |
 #+---+------+------+---------+---------------+----------------+-------------------+------+-----+---------------+---------------+-------+
+# HOME latitude: 47.3667049
+#      longitude: 8.5499866
+
 
 def createTakeoffCurr():
     # 22	MAV_CMD_NAV_TAKEOFF	Takeoff from ground / hand
@@ -35,7 +38,7 @@ def createTakeoffCurr():
     wp.param4 = 0.0
     wp.x_lat = 47.3669242859
     wp.y_long = 8.54999923706
-    wp.z_alt = 25.0
+    wp.z_alt = 15.0
     return wp
 
 def createWaypoint(_visitationRadius, _lat, _lon, _alt):
@@ -61,9 +64,9 @@ def createLand():
     wp.param2 = 3.0
     wp.param3 = -0.0
     wp.param4 = 0.0
-    wp.x_lat = 47.3669242859
-    wp.y_long = 8.54999923706
-    wp.z_alt = 25.0
+    wp.x_lat = 47.3667049
+    wp.y_long = 8.5499866
+    wp.z_alt = 15.0
     return wp
 
 
@@ -78,8 +81,8 @@ if __name__ == "__main__":
     waypointSetCurrService = rospy.ServiceProxy('/mavros/mission/set_current', WaypointSetCurrent)
 
     wpPushRequest.waypoints.append(createTakeoffCurr())
-    wpPushRequest.waypoints.append(createWaypoint(10.0, 47.3670138753861707, 8.55059266090393066, 25.0))
-    wpPushRequest.waypoints.append(createWaypoint(10.0, 47.3665084839, 8.55013847351, 25.0))
+    wpPushRequest.waypoints.append(createWaypoint(10.0, 47.3670138753861707, 8.55059266090393066, 15.0))
+    wpPushRequest.waypoints.append(createWaypoint(10.0, 47.3667049, 8.5499866, 15.0))
     wpPushRequest.waypoints.append(createLand())
     print(waypointPushService.call(wpPushRequest))
 
