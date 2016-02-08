@@ -6,3 +6,5 @@
 - git:
     local-name: mavlink
     uri: https://github.com/mavlink/mavlink-gbp-release.git
+    version: release/indigo/mavlink/2016.2.5-0
+
